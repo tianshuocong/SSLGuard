@@ -48,13 +48,3 @@ python verify.py --ssl byol --embed-path [Watermarked_encoder_path] --sk [sk_pat
 python classifier.py --ch clean --ssl byol --task stl10 --log-dir [LOG_PATH]  --log-name [LOG_NAME]
 ```
 
-## Experimental Results
-SSLGuard can keep the utility of the clean encoders.
-Here we train a classifier by freezing the pre-trained encoder and evaluate its top-1 accuracy.
-The following table shows the downstream accuracy on different downstream tasks, i.e.,STL-10, CIFAR-10, MNIST, and Fashion-MNIST
-|        | SimCLR | MoCo v2 | BYOL  |
-|  :----:  | :----:  |:----: |:----:  |
-| STL-10  | 0.781 | 0.888 | 0.940|
-| CIFAR-10  | 0.765 | 0.701 | 0.857|
-| MNIST  | 0.965 | 0.956 | 0.966|
-| Fashion-MNIST  | 0.845 | 0.888 | 0.894|
